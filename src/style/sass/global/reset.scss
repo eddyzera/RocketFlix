@@ -4,8 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: $bg-linear;
-  background-repeat: no-repeat;
   font-family: $font-family;
-  color: map-get($gray, '50' )
+  color: map-get($gray, '50' );
+  overflow: hidden;
 }

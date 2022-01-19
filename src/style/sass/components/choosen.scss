@@ -1,0 +1,68 @@
+.choosen {
+  height: 100vw;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .choosen-information {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 3rem;
+
+      &__content {
+        max-width: 100%;
+        margin: 0;
+
+        h2 {
+          margin-bottom: 1rem;
+        }
+
+        p {
+          text-align: left;
+        }
+      }
+    }
+
+    button {
+      margin: 3rem 0;
+      width: 250px;
+      height: 80px;
+      border: none;
+      border-radius: 5px;
+      color: black;
+      font-weight: 700;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      cursor: pointer;
+      .choosen-button {
+        background: url('../../assets/logo.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+        height: 65px;
+        width: 96px;
+      }
+
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}
