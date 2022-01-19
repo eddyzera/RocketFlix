@@ -2,10 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './style/css/style.css'
 import App from './App'
+import { ProviderStorage } from './provider/store'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ProviderStorage>
     <App />
-  </React.StrictMode>,
+  </ProviderStorage>,
   document.getElementById('root')
 )
