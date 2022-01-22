@@ -1,12 +1,14 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { movieAction } from '../../provider/store/slice/movieSlice'
 import Logo from '../../assets/logo.svg'
-import Poster from '../../assets/poster.png'
 import { MovieProps } from './types'
 
 export const Choosen: React.FC<MovieProps> = ({
   movie,
   isLoading
 }: MovieProps) => {
+  const dispatch = useDispatch()
   return (
     <div className="choosen container">
       <div className="choosen__title">
@@ -29,15 +31,15 @@ export const Choosen: React.FC<MovieProps> = ({
             </div>
           </>
         )}
+        <button onClick={() => dispatch(movieAction.loadMovie())}>
+          <span className="choosen-button"></span>
+          Encontrar filme
+        </button>
+        <p>
+          Clique em Encontrar filme que traremos informações de algum filme para
+          você assistir hoje.
+        </p>
       </div>
-      <button>
-        <span className="choosen-button"></span>
-        Encontrar filme
-      </button>
-      <p>
-        Clique em Encontrar filme que traremos informações de algum filme para
-        você assistir hoje.
-      </p>
     </div>
   )
 }
