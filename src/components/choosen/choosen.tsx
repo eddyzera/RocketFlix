@@ -21,7 +21,7 @@ export const Choosen: React.FC<MovieProps> = ({
             <div className="choosen-information">
               <img
                 className="choosen-information__poster"
-                src={movie.poster}
+                src={`https://image.tmdb.org/t/p/w500${movie.poster}`}
                 alt=""
               />
               <div className="choosen-information__content">

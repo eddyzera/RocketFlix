@@ -1,11 +1,15 @@
-import { call, CallEffect, takeLatest } from 'redux-saga/effects'
+import { call, takeLatest, put } from 'redux-saga/effects'
 import { movieAction } from '../store/slice/movieSlice'
 import { fetchApi } from '../../service/api'
 
-function* fetchLoadMovie(): Generator<CallEffect<any>, void, unknown> {
-  console.log('Cai Aqui')
-  const result = yield call(fetchApi)
-  console.log(result)
+function* fetchLoadMovie() {
+  const result: {
+    id: number
+    title: string
+    description: string
+    poster: string
+  } = yield call(fetchApi)
+  yield put(movieAction.changeMovie(result))
 }
 
 export default function* rootSaga() {

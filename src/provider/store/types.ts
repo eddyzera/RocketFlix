@@ -6,6 +6,7 @@ export interface ProviderStorageProps {
 
 export interface MovieData {
   data: {
+    id: number
     title: string
     description: string
     poster: string
